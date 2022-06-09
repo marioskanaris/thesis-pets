@@ -225,7 +225,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           name: "adoptions"
         });
       })["catch"](function (error) {
-        _this.$toast.error(error.response.data.errorDescriptions[0]);
+        alert(error.response.data.errorDescriptions);
       });
     },
     createImage: function createImage(file) {

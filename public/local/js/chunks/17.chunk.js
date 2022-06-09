@@ -97,53 +97,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   })), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapMutations"])({
     setLoading: "users/setLoading"
   })), {}, {
-<<<<<<< HEAD
-    create: function create() {
-      var _this = this;
-
-      var formData = new FormData();
-      formData.append("name", this.adoption.name);
-      formData.append("description", this.adoption.description);
-      formData.append("age", this.adoption.age);
-      formData.append("kind", this.adoption.kind);
-      formData.append("size", this.adoption.size);
-      formData.append("race", this.adoption.race);
-      formData.append("gender", this.adoption.gender);
-
-      if (this.adoption.shelter_id) {
-        formData.append("shelter_id", this.adoption.shelter_id);
-      }
-
-      formData.append("published", this.adoption.published == true ? 1 : 0);
-      formData.append("vaccinated", this.adoption.vaccinated == true ? 1 : 0);
-      formData.append("neutered", this.adoption.neutered == true ? 1 : 0);
-      formData.append("activated", this.adoption.activated == true ? 1 : 0);
-      formData.append("primary_image", this.adoption.primary_image);
-
-      if (this.adoption.secondary_image) {
-        formData.append("secondary_image", this.adoption.secondary_image);
-      }
-
-      if (this.adoption.thirdary_image) {
-        formData.append("thirdary_image", this.adoption.thirdary_image);
-      }
-
-      _api_Api__WEBPACK_IMPORTED_MODULE_0__["default"].post("adoptions", formData).then(function (response) {
-        _this.$toast.success("Adoption successfully created.");
-
-        _this.$router.push({
-          name: "adoptions"
-        });
-      })["catch"](function (error) {
-        alert(error.response.data.errorDescriptions);
-=======
     editUser: function editUser(item) {
       this.$router.push({
         name: "users-edit",
         params: {
           id: item.id
         }
->>>>>>> 3900f613faabf9c61c52f54f364feed8e0f494f8
       });
     },
     queryUsers: function queryUsers() {
