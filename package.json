@@ -1,0 +1,66 @@
+{
+    "private": true,
+    "version": "2.13.0",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "clean": "rm -rf public/production/*",
+        "release": "standard-version -a",
+        "commit": "git-cz"
+    },
+    "devDependencies": {
+        "@digitalroute/cz-conventional-changelog-for-jira": "^7.1.0",
+        "axios": "^0.19",
+        "bootstrap": "^4.0.0",
+        "commitizen": "^4.2.4",
+        "cross-env": "^7.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.13",
+        "node-sass": "^6.0.1",
+        "popper.js": "^1.12",
+        "prettier": "^2.2.1",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.32.13",
+        "sass-loader": "^10",
+        "standard-version": "^9.3.2",
+        "tailwindcss-plugins": "^0.3.0",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "@tinymce/tinymce-vue": "^3.2.8",
+        "js-loading-overlay": "^1.0.5",
+        "screenfull": "^5.1.0",
+        "swiper": "^8.1.4",
+        "tailwindcss": "^1.4.5",
+        "uuid": "^8.3.2",
+        "vee-validate": "^2.2.15",
+        "vue-json-pretty": "^1.8.2",
+        "vue-recaptcha": "^2.0.1",
+        "vue-router": "^3.5.1",
+        "vue-router-user-roles": "^0.1.92",
+        "vuetify": "^2.5.7",
+        "vuetify-loader": "^1.5.0",
+        "vuex": "^3.5.1"
+    },
+    "config": {
+        "commitizen": {
+            "path": "@digitalroute/cz-conventional-changelog-for-jira",
+            "jiraPrepend": "[",
+            "jiraAppend": "]"
+        }
+    },
+    "standard-version": {
+        "scripts": {
+            "precommit": "echo $(sed -nE 's/^\\s*\"version\": \"(.*?)\",$/\\1/p' package.json) > version && cp version ../VERSION && git add version ../VERSION"
+        }
+    }
+}

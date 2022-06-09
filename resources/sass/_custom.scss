@@ -1,0 +1,45 @@
+.d-custom-flex {
+  display: flex !important;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0.2;
+}
+
+.home-welcome {
+  font-size: 84px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+}
+
+.v-dialog {
+  z-index: 50;
+}
+
+.v-chip--select {
+  animation-name: chip;
+  animation-duration: 0.8s;
+
+  @keyframes chip {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.no-perm {
+  display: none !important;
+}

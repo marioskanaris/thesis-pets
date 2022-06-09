@@ -1,0 +1,60 @@
+/*========== Custome Variable ==========*/
+// App Global Font Size
+$html-font-size:              16px;
+
+//App Background Scale
+$primary: 					#52A35F;
+$secondary:         		#82b1ff !default;
+$success: 					#00D014;
+$info: 						#00D0BD !default;
+$warning: 					#FFB70F !default;
+$danger: 					#FF3739 !default;
+$pink:                  #FA0055 !default;
+$blue:                  #2E62FF !default;
+$purple:                #2B314A !default;
+$light:             		#FFFFFF !default;
+$dark:              		#000000 !default;
+$base:                  #F4F7FA !default;
+$base-light:            #FAFAFA !default;
+
+// App Text Scale
+$gray-dark: 				#464D69 !default;
+$gray:                  #727891 !default;
+$gray-light: 				#A5A7B2 !default;
+$gray-lighter: 			#DDE6F3 !default;
+
+//App Theme Color
+$theme-colors: () !default;
+$theme-colors: map-merge((
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark,
+        "blue":       $blue,
+), $theme-colors);
+
+// Settings for the `<body>` element.
+$body-bg:                       $base;
+$body-color:                    $gray-dark;
+$font-family-base:              'Montserrat', sans-serif;
+$border-color:                  #EBEDF2;
+
+// Setting for the Typograpgy elements.
+$font-size-base:                1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                  1.25rem !default;
+$font-size-sm:                 .875rem !default;
+
+// Setting For Heading Element
+$h2-font-size:                  1.5rem !default;       // 24px
+
+// Breadcrumb Variable
+$breadcrumb-font-weight:        500;
+$breadcrumb-font-color:         $gray-dark;
+$breadcrumb-font-size:          1.5rem; //24px;
+
+//Heder Variable
+$header-box-shadow:             0 4px 15px 0 rgba(0,0,0,0.09);

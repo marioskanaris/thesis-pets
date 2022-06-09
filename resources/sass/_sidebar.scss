@@ -1,0 +1,63 @@
+.v-navigation-drawer {
+  overflow-y: auto;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  background-position: 100% center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.4s linear 0s;
+  padding: 0;
+  box-shadow: $sidebar-box-shadow;
+  .v-list-item {
+    padding: 0px !important;
+  }
+  .v-list-item-title {
+    text-decoration: none;
+  }
+  .entities-list {
+    padding-left: 15px !important;
+  }
+  .sub-entities-list {
+    padding-left: 11px !important;
+    border-left: 5px solid #2b7192;
+  }
+  .sub-entities-list:hover {
+    background-color: rgba(150, 171, 192, 0.2);
+  }
+  .sub-entities-list:active {
+    background-color: rgba(190, 190, 190, 0.2);
+  }
+  .entities-list:hover {
+    background-color: rgba(150, 171, 192, 0.2);
+  }
+  .entities-list:active {
+    background-color: rgba(190, 190, 190, 0.2);
+  }
+  .v-list-group__header:hover {
+    background-color: rgba(150, 171, 192, 0.2) !important;
+  }
+  .head-section {
+    padding-left: 7px !important;
+  }
+  .user-block {
+    padding-left: 20px !important;
+    .divider {
+      margin: $divider-inset-margin;
+    }
+  }
+  .sidebar-title {
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+}
+
+.v-list-item-title {
+  text-decoration: none;
+}
+
+.v-list-group
+  .v-list-group__header
+  .v-list-item__icon.v-list-group__header__append-icon {
+  padding-right: 10% !important;
+}

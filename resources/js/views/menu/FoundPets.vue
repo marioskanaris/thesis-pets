@@ -1,0 +1,129 @@
+<template>
+  <v-data-table
+    :headers="tableHeaders"
+    :items="foundPets.data"
+    no-data-text="No items were found."
+    :loading="loading"
+    :footer-props="{ 'items-per-page-options': [10, 20, 30, 40, 50] }"
+    :server-items-length="foundPets.meta ? foundPets.meta.total : 0"
+    :options.sync="options"
+    class="elevation-22"
+  >
+    <template v-slot:item.published="{ item }">
+      <v-chip :color="item.published ? 'green' : 'red'" dark>
+        {{ item.published ? "Published" : "Unpublished" }}
+      </v-chip>
+    </template>
+    <template v-slot:top>
+      <v-toolbar flat class="align-center justify-center">
+        <div class="w-50 d-flex flex-row align-items-center">
+          <v-text-field
+            v-model="filters.search"
+            append-icon="mdi-magnify"
+            label="Αναζήτηση"
+            single-line
+            hide-details
+          >
+          </v-text-field>
+        </div>
+        <v-btn color="primary" @click="createFoundPet()"
+          >Δημιουργία Νέου Εντοπισμένου Κατοικιδίου</v-btn
+        >
+      </v-toolbar>
+    </template>
+
+    <template v-slot:[`item.actions`]="{ item }">
+      <v-icon @click="editFoundPet(item)" class="mr-2">mdi-pencil</v-icon>
+      <v-icon @click="deleteFoundPetDialog(item)" class="mr-2"
+        >mdi-delete</v-icon
+      >
+    </template>
+  </v-data-table>
+</template>
+
+<script>
+import { mapActions, mapGetters, mapMutations } from "vuex";
+import { deletionMixin } from "Mixins/deletionMixin";
+
+export default {
+  name: "foundPets",
+  mixins: [deletionMixin],
+  data() {
+    return {
+      awaitingSearch: false,
+      showDialog: false,
+      filters: {
+        search: "",
+      },
+      options: {},
+    };
+  },
+  watch: {
+    options: {
+      handler() {
+        this.queryFoundPets();
+      },
+    },
+    filters: {
+      handler() {
+        this.options.page = 1;
+        this.queryFoundPets();
+      },
+      deep: true,
+    },
+  },
+  mounted() {
+    this.queryFoundPets();
+  },
+  beforeDestroy() {
+    this.$root.$off("resetRoute");
+  },
+  methods: {
+    ...mapActions({
+      getFoundPets: "foundPets/getFoundPets",
+    }),
+    ...mapMutations({
+      setLoading: "foundPets/setLoading",
+    }),
+    createFoundPet() {
+      this.$router.push({ name: "found-pets-create" });
+    },
+    editFoundPet(item) {
+      this.$router.push({
+        name: "found-pets-edit",
+        params: { id: item.id },
+      });
+    },
+    deleteFoundPetDialog(item) {
+      this.deletionModal(item.id, "foundPets/deleteFoundPet", item.title);
+      this.queryFoundPets();
+    },
+    submit() {
+      this.showDialog = true;
+    },
+    queryFoundPets() {
+      if (!this.awaitingSearch) {
+        this.awaitingSearch = true;
+
+        setTimeout(() => {
+          this.getFoundPets({
+            options: this.options,
+            filters: this.filters,
+          });
+          this.awaitingSearch = false;
+        }, 600);
+      }
+    },
+    refreshList() {
+      this.queryFoundPets();
+    },
+  },
+  computed: {
+    ...mapGetters({
+      foundPets: "foundPets/foundPets",
+      tableHeaders: "foundPets/tableHeaders",
+      loading: "foundPets/loading",
+    }),
+  },
+};
+</script>

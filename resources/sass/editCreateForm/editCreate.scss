@@ -1,0 +1,25 @@
+
+
+.form-container {
+    height: 85vh !important;
+    width: 150vh !important;
+    padding: 50px !important;
+    padding-bottom: 20px !important;
+    border-radius: 2%;
+    .v-btn {
+        margin-bottom: 70px;
+    }
+    .progress-circular {
+        justify-items: center !important;
+        align-items: center !important;
+    }
+}
+
+.dialogs{ 
+    font-size: large !important;
+    font-family: 'Nunito', sans-serif;
+}
+
+.required label::after {
+    content: "*";
+}
