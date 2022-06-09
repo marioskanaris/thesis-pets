@@ -92,7 +92,7 @@
 .color--brand *, .color--brand { color: var(--color-brand); }
 .color--accent *, .color--accent { color: var(--color-accent); }
 .color--dark *, .color--dark { color: var(--color-dark); }
-.color--light *, .color--light { color: var(--color-light); }
+.color--light *, .color--light { color: var(--color-light)!important; }
 .color--grey *, .color--grey { color: var(--color-grey); }
 .color--white *, .color--white { color: #fff; }
 .color--black *, .color--black { color: #000; }

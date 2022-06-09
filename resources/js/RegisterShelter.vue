@@ -193,7 +193,7 @@
       </div>
       <v-row justify="center" align="center" class="m-p--sm">
         <v-card
-          style="width: 500px; height: 800px"
+          style="width: 500px; height: 1250px"
           class="initial-bg elevation-12"
         >
           <v-card-title class="justify-center">
@@ -246,7 +246,7 @@
                   v-model="data.region"
                   :rules="validation.region"
                   class="required"
-                  label="Region"
+                  label="Περιφέρεια"
                 ></v-select>
                 <v-text-field
                   label="ΑΦΜ"
@@ -271,7 +271,7 @@
                   prepend-icon="mdi-paperclip"
                   accept="image/png, image/jpeg, image/jpg"
                   @change="onFileChange"
-                  label="Image"
+                  label="Εικόνα"
                 ></v-file-input>
                 <v-text-field
                   label="Κωδικός Πρόσβασης"

@@ -38,7 +38,7 @@ export default {
 }
 
 .section_header_scroll .logo--icon #petsbook_logo , .theme--dark.v-application .logo--icon #petsbook_logo {
-  fill:#FFFFFF;
+  fill:#FFFFFF!important;
 }
 
 .section-footer #petsbook_logo {
