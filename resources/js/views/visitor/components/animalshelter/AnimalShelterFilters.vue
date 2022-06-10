@@ -166,14 +166,17 @@
           "
           :class="{ el__hidden: showfilters }"
         >
-          <a href="animal-shelters">
+          <a 
+              :href="'/animal-shelters/' + shelter.id">
             <img :src="shelter.imageUrl" width="100%" />
           </a>
           <div class="font--20 mt--sm weight--700">
-            <a href="animal-shelters">{{ shelter.name }}</a>
+            <a 
+              :href="'/animal-shelters/' + shelter.id">{{ shelter.name }}</a>
           </div>
           <div class="font--12 pb--sm">
-            <a href="/blog">{{ shelter.region }}</a>
+            <a 
+              :href="'/animal-shelters/' + shelter.id">{{ shelter.region }}</a>
           </div>
           <p class="font--14 mb--sm">
             {{ shelter.description }}

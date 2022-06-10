@@ -4,27 +4,27 @@
     <v-container fluid class="elevation-22 form">
       <v-form ref="form">
         <div class="container-fluid">
-          <v-text-field v-model="lostPet.name" label="Name" />
+          <v-text-field v-model="lostPet.name" label="Όνομα" />
           <v-text-field
             v-model="lostPet.description"
             :rules="validation.description"
             class="required"
-            label="Description"
+            label="Περιγραφή"
           />
           <v-text-field
             v-model="lostPet.race"
             :rules="validation.race"
-            label="Race"
+            label="Ράτσα"
           />
           <v-text-field
             type="number"
             v-model="lostPet.age"
             :rules="validation.age"
-            label="Age"
+            label="Ηλικία"
           />
-          <v-switch v-model="lostPet.vaccinated" label="Vaccinated"></v-switch>
-          <v-switch v-model="lostPet.neutered" label="Neutered"></v-switch>
-          <v-switch v-model="lostPet.published" label="Published"></v-switch>
+          <v-switch v-model="lostPet.vaccinated" label="Εμβολιασμένο"></v-switch>
+          <v-switch v-model="lostPet.neutered" label="Στειρωμένο"></v-switch>
+          <v-switch v-model="lostPet.published" label="Δημοσίευση"></v-switch>
           <v-img
             v-if="primaryImageBase64"
             class="mt-5 mb-5"
@@ -41,7 +41,7 @@
             prepend-icon="mdi-paperclip"
             accept="image/png, image/jpeg, image/jpg"
             @change="onFileChange"
-            label="Primary Image"
+            label="Πρωτεύων Εικόνα"
           ></v-file-input>
           <v-img
             v-if="secondaryImageBase64"
@@ -58,7 +58,7 @@
             prepend-icon="mdi-paperclip"
             accept="image/png, image/jpeg, image/jpg"
             @change="onSecondFileChange"
-            label="Secondary Image"
+            label="Δευτερεύον Εικόνα"
           ></v-file-input>
           <v-img
             v-if="thirdaryImageBase64"
@@ -75,35 +75,35 @@
             prepend-icon="mdi-paperclip"
             accept="image/png, image/jpeg, image/jpg"
             @change="onThirdFileChange"
-            label="Thirdary Image"
+            label="Τριτεύων Εικόνα"
           ></v-file-input>
           <v-select
             :items="regions"
             v-model="lostPet.region"
             :rules="validation.region"
             class="required"
-            label="Region"
+            label="Περιφέρεια"
           ></v-select>
           <v-select
             :items="kinds"
             v-model="lostPet.kind"
             :rules="validation.kind"
             class="required"
-            label="Kind"
+            label="Είδος"
           ></v-select>
           <v-select
             :items="genders"
             v-model="lostPet.gender"
             :rules="validation.gender"
             class="required"
-            label="Gender"
+            label="Φύλο"
           ></v-select>
           <v-select
             :items="sizes"
             v-model="lostPet.size"
             :rules="validation.size"
             class="required"
-            label="Size"
+            label="Μέγεθος"
           ></v-select>
           <v-select
             :items="shelters.data"
@@ -111,7 +111,7 @@
             :rules="validation.shelter_id"
             item-text="name"
             item-value="id"
-            label="Shelter"
+            label="Φιλοζωική"
           ></v-select>
           <div class="submit-btn">
             <div class="submit-btn">

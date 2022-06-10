@@ -431,7 +431,7 @@ var render = function() {
                     rules: _vm.validation.primary_image,
                     "prepend-icon": "mdi-paperclip",
                     accept: "image/png, image/jpeg, image/jpg",
-                    label: "Primary Image"
+                    label: "Προτερεύον εικόνα"
                   },
                   on: { change: _vm.onFileChange }
                 }),
@@ -455,7 +455,7 @@ var render = function() {
                     rules: _vm.validation.secondary_image,
                     "prepend-icon": "mdi-paperclip",
                     accept: "image/png, image/jpeg, image/jpg",
-                    label: "Secondary Image"
+                    label: "Δευτερεύον εικόνα"
                   },
                   on: { change: _vm.onSecondFileChange }
                 }),
@@ -479,7 +479,7 @@ var render = function() {
                     rules: _vm.validation.thirdary_image,
                     "prepend-icon": "mdi-paperclip",
                     accept: "image/png, image/jpeg, image/jpg",
-                    label: "Thirdary Image"
+                    label: "Τριτεύον εικόνα"
                   },
                   on: { change: _vm.onThirdFileChange }
                 }),
@@ -489,7 +489,7 @@ var render = function() {
                   attrs: {
                     items: _vm.regions,
                     rules: _vm.validation.region,
-                    label: "Region"
+                    label: "Περιφέρεια"
                   },
                   model: {
                     value: _vm.foundPet.region,
@@ -505,7 +505,7 @@ var render = function() {
                   attrs: {
                     items: _vm.kinds,
                     rules: _vm.validation.kind,
-                    label: "Kind"
+                    label: "Είδος"
                   },
                   model: {
                     value: _vm.foundPet.kind,
@@ -521,7 +521,7 @@ var render = function() {
                   attrs: {
                     items: _vm.genders,
                     rules: _vm.validation.gender,
-                    label: "Gender"
+                    label: "Γένος"
                   },
                   model: {
                     value: _vm.foundPet.gender,
@@ -537,7 +537,7 @@ var render = function() {
                   attrs: {
                     items: _vm.sizes,
                     rules: _vm.validation.size,
-                    label: "Size"
+                    label: "Μέγεθος"
                   },
                   model: {
                     value: _vm.foundPet.size,
@@ -554,7 +554,7 @@ var render = function() {
                     rules: _vm.validation.shelter_id,
                     "item-text": "name",
                     "item-value": "id",
-                    label: "Shelter"
+                    label: "Φιλοζωική"
                   },
                   model: {
                     value: _vm.foundPet.shelter_id,
@@ -580,7 +580,7 @@ var render = function() {
                             }
                           }
                         },
-                        [_vm._v("Create FoundPet")]
+                        [_vm._v("Δημιουργία Εντοπισμένου κατοικιδίου")]
                       )
                     ],
                     1

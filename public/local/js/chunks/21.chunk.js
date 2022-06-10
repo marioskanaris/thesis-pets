@@ -327,7 +327,7 @@ var render = function() {
               { staticClass: "container-fluid" },
               [
                 _c("v-text-field", {
-                  attrs: { label: "Name" },
+                  attrs: { label: "Όνομα" },
                   model: {
                     value: _vm.lostPet.name,
                     callback: function($$v) {
@@ -341,7 +341,7 @@ var render = function() {
                   staticClass: "required",
                   attrs: {
                     rules: _vm.validation.description,
-                    label: "Description"
+                    label: "Περιγραφή"
                   },
                   model: {
                     value: _vm.lostPet.description,
@@ -353,7 +353,7 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("v-text-field", {
-                  attrs: { rules: _vm.validation.race, label: "Race" },
+                  attrs: { rules: _vm.validation.race, label: "Ράτσα" },
                   model: {
                     value: _vm.lostPet.race,
                     callback: function($$v) {
@@ -367,7 +367,7 @@ var render = function() {
                   attrs: {
                     type: "number",
                     rules: _vm.validation.age,
-                    label: "Age"
+                    label: "Ηλικία"
                   },
                   model: {
                     value: _vm.lostPet.age,
@@ -379,7 +379,7 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("v-switch", {
-                  attrs: { label: "Vaccinated" },
+                  attrs: { label: "Εμβολιασμένο" },
                   model: {
                     value: _vm.lostPet.vaccinated,
                     callback: function($$v) {
@@ -390,7 +390,7 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("v-switch", {
-                  attrs: { label: "Neutered" },
+                  attrs: { label: "Στειρωμένο" },
                   model: {
                     value: _vm.lostPet.neutered,
                     callback: function($$v) {
@@ -401,7 +401,7 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("v-switch", {
-                  attrs: { label: "Published" },
+                  attrs: { label: "Δημοσίευση" },
                   model: {
                     value: _vm.lostPet.published,
                     callback: function($$v) {
@@ -431,7 +431,7 @@ var render = function() {
                     rules: _vm.validation.primary_image,
                     "prepend-icon": "mdi-paperclip",
                     accept: "image/png, image/jpeg, image/jpg",
-                    label: "Primary Image"
+                    label: "Πρωτεύων Εικόνα"
                   },
                   on: { change: _vm.onFileChange }
                 }),
@@ -455,7 +455,7 @@ var render = function() {
                     rules: _vm.validation.secondary_image,
                     "prepend-icon": "mdi-paperclip",
                     accept: "image/png, image/jpeg, image/jpg",
-                    label: "Secondary Image"
+                    label: "Δευτερεύον Εικόνα"
                   },
                   on: { change: _vm.onSecondFileChange }
                 }),
@@ -479,7 +479,7 @@ var render = function() {
                     rules: _vm.validation.thirdary_image,
                     "prepend-icon": "mdi-paperclip",
                     accept: "image/png, image/jpeg, image/jpg",
-                    label: "Thirdary Image"
+                    label: "Τριτεύων Εικόνα"
                   },
                   on: { change: _vm.onThirdFileChange }
                 }),
@@ -489,7 +489,7 @@ var render = function() {
                   attrs: {
                     items: _vm.regions,
                     rules: _vm.validation.region,
-                    label: "Region"
+                    label: "Περιφέρεια"
                   },
                   model: {
                     value: _vm.lostPet.region,
@@ -505,7 +505,7 @@ var render = function() {
                   attrs: {
                     items: _vm.kinds,
                     rules: _vm.validation.kind,
-                    label: "Kind"
+                    label: "Είδος"
                   },
                   model: {
                     value: _vm.lostPet.kind,
@@ -521,7 +521,7 @@ var render = function() {
                   attrs: {
                     items: _vm.genders,
                     rules: _vm.validation.gender,
-                    label: "Gender"
+                    label: "Φύλο"
                   },
                   model: {
                     value: _vm.lostPet.gender,
@@ -537,7 +537,7 @@ var render = function() {
                   attrs: {
                     items: _vm.sizes,
                     rules: _vm.validation.size,
-                    label: "Size"
+                    label: "Μέγεθος"
                   },
                   model: {
                     value: _vm.lostPet.size,
@@ -554,7 +554,7 @@ var render = function() {
                     rules: _vm.validation.shelter_id,
                     "item-text": "name",
                     "item-value": "id",
-                    label: "Shelter"
+                    label: "Φιλοζωική"
                   },
                   model: {
                     value: _vm.lostPet.shelter_id,

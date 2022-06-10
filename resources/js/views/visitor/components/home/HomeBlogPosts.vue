@@ -22,12 +22,6 @@
               >{{ post.title }}</a
             >
           </div>
-          <p class="font--16 max--300">
-            {{
-              post.description.replace(/(<([^>]+)>)/gi, "").substring(0, 100)
-            }}...
-            {{ post.description.substring(0, 100) }}
-          </p>
           <div>
             <span class="blog-posts-date font--14 color--accent"
               >Ημερομηνία: {{ post.date }}</span

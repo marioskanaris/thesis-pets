@@ -41,7 +41,7 @@
             prepend-icon="mdi-paperclip"
             accept="image/png, image/jpeg, image/jpg"
             @change="onFileChange"
-            label="Primary Image"
+            label="Προτερεύον εικόνα"
           ></v-file-input>
           <v-img
             v-if="secondaryImageBase64"
@@ -58,7 +58,7 @@
             prepend-icon="mdi-paperclip"
             accept="image/png, image/jpeg, image/jpg"
             @change="onSecondFileChange"
-            label="Secondary Image"
+            label="Δευτερεύον εικόνα"
           ></v-file-input>
           <v-img
             v-if="thirdaryImageBase64"
@@ -75,35 +75,35 @@
             prepend-icon="mdi-paperclip"
             accept="image/png, image/jpeg, image/jpg"
             @change="onThirdFileChange"
-            label="Thirdary Image"
+            label="Τριτεύον εικόνα"
           ></v-file-input>
           <v-select
             :items="regions"
             v-model="foundPet.region"
             :rules="validation.region"
             class="required"
-            label="Region"
+            label="Περιφέρεια"
           ></v-select>
           <v-select
             :items="kinds"
             v-model="foundPet.kind"
             :rules="validation.kind"
             class="required"
-            label="Kind"
+            label="Είδος"
           ></v-select>
           <v-select
             :items="genders"
             v-model="foundPet.gender"
             :rules="validation.gender"
             class="required"
-            label="Gender"
+            label="Γένος"
           ></v-select>
           <v-select
             :items="sizes"
             v-model="foundPet.size"
             :rules="validation.size"
             class="required"
-            label="Size"
+            label="Μέγεθος"
           ></v-select>
           <v-select
             :items="shelters.data"
@@ -111,12 +111,12 @@
             :rules="validation.shelter_id"
             item-text="name"
             item-value="id"
-            label="Shelter"
+            label="Φιλοζωική"
           ></v-select>
           <div class="submit-btn">
             <div class="submit-btn">
               <v-btn color="success" dark @click="create()"
-                >Create FoundPet</v-btn
+                >Δημιουργία Εντοπισμένου κατοικιδίου</v-btn
               >
             </div>
           </div>
